@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Remove any default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make the body take up the full viewport height and width */
+body, html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Set up the full-page background image */
+.background-image {
+    background-image: url('Certificates/certificate-image.png'); /* Replace with the path to your image */
+    background-size: cover;          /* Cover the entire viewport */
+    background-position: center;     /* Center the image */
+    background-repeat: no-repeat;    /* Prevent tiling */
+    height: 100vh;                   /* Full viewport height */
+    width: 100vw;                    /* Full viewport width */
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Page Photo Background</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-image"></div>
+</body>
+</html>
