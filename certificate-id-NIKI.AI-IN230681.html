@@ -3,29 +3,56 @@
 <head>
     <style>
         /* Remove any default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Make the body take up the full viewport height and width */
-body, html {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
+        /* Make the body take up the full viewport height and width */
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
 
-/* Set up the full-page background image */
-.background-image {
-    background-image: url('Certificates/certificate-image.png'); /* Replace with the path to your image */
-    background-size: cover;          /* Cover the entire viewport */
-    background-position: center;     /* Center the image */
-    background-repeat: no-repeat;    /* Prevent tiling */
-    height: 100vh;                   /* Full viewport height */
-    width: 100vw;                    /* Full viewport width */
-}
+        /* Set up the full-page background image */
+        .background-image {
+            background-image: url('Certificates/certificate-image.png'); /* Replace with the path to your image */
+            background-size: contain;         /* Ensure the image is contained within the viewport */
+            background-position: center;      /* Center the image */
+            background-repeat: no-repeat;     /* Prevent tiling */
+            height: 100vh;                    /* Full viewport height */
+            width: 100vw;                     /* Full viewport width */
+        }
 
+        /* Optional: Add a text box with responsive padding */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .content {
+                font-size: 14px; /* Adjust text size for smaller screens */
+                padding: 15px;    /* Reduce padding for smaller devices */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                font-size: 12px;  /* Further reduce text size on very small screens */
+                padding: 10px;    /* Further reduce padding */
+            }
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,6 +60,12 @@ body, html {
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background-image"></div>
+    <div class="background-image">
+        <!-- Optional content block to show on top of the background image -->
+        <div class="content">
+            <h1>Your Certificate Title</h1>
+            <p>This is some text content over the background.</p>
+        </div>
+    </div>
 </body>
 </html>
